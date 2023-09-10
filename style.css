@@ -92,7 +92,14 @@ main{
 }
 
 .bell{
-    padding-top: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    transition-duration:100ms;
+}
+.bell:hover{
+    transform: scale(1.03);
+
 }
 
 .profileIcon{
@@ -130,7 +137,7 @@ main{
 .buttons{
     display: flex;
     align-items: center;
-    justify-content: center;
+
     gap: 12px;
 }
 
@@ -162,38 +169,54 @@ button{
 
 /* Main */
 .content{
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: min-content 1fr;
+    margin-bottom: 10px;
 }
 .projects div{
     margin: 5px;
     height: 400px;
     width: 400px;
-    background-color: red;
     box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
 }
 .projects{
-    align-items: center;
+    margin-right: 10px;
     justify-content: center;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
 }
-
+.news{
+    margin-right: 10px;
+}
 .announcements div{
-    height: 700px;
+    border-radius: 10px;
+    height: 400px;
     width: 300px;
-    background-color: red;
+    background-color: #f9fffc;
+    padding: 25px;
+}
+h4{
+    font-weight: bold;
+ 
 }
 
-.trending div{
-    height: 700px;
+.trending > div{
+    border-radius: 10px;
+    height: fit-content;
+    padding: 25px;
     width: 300px;
-    background-color: red;
+    background-color: #f9fffc;
+}
+
+.profiles div{
+    display: flex;
+    gap: 15px;
 }
 
 a{
@@ -232,6 +255,12 @@ h2{
 }
 #project2{
     background-image: url(./images/etchasketch.png);
+}
+#project3{
+    background-image: url(./images/calculator.png);
+}
+#project4{
+    background-image: url(./images/signup.png);
 }
 
 @media only screen and (max-width: 800px) {
@@ -281,7 +310,7 @@ h2{
     }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
     .content{
         grid-template-columns: 1fr;
         place-items: center;
@@ -291,6 +320,11 @@ h2{
 @media only screen and (max-width: 500px) {
   .buttons{
     flex-direction: column;
+   justify-content: center;
   }
+
+  
+
+ 
 
 }
